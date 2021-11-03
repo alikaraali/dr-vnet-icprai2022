@@ -1,2 +1,2 @@
-# DR-VesselNet
+# DR-VNet
 Retinal Vessel Segmentation
