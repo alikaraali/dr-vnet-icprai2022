@@ -3,6 +3,7 @@ Retinal Vessel Segmentation
 
 code will be publicly available soon
 
+The weights can be downloaded here.
 
 Any papers using this code should cite the paper accordingly. 
 ```
