@@ -1,9 +1,7 @@
 # DR-VNet
 Retinal Vessel Segmentation
 
-code will be publicly available soon
-
-The weights can be downloaded here.
+The weights can be downloaded here. (soon coming)
 
 Any papers using this code should cite the paper accordingly. 
 ```
