@@ -80,8 +80,10 @@ for train_no in range(1, 6):
     if os.path.isfile(weight_finetune):
         model.load_weights(weight_finetune)
 
-
+    start = timer()
     y_pred = model.predict(x_test)
+    end = timer()
+    print(end - start)
     y_pred = crop_to_shape(y_pred,(20,584,565,1))
     y_pred_threshold = []
     i = 0
@@ -90,11 +92,13 @@ for train_no in range(1, 6):
         _, temp = cv2.threshold(y, 0.5, 1, cv2.THRESH_BINARY)
         y_pred_threshold.append(temp)
 
-        y = y * 255
+        tempx = temp * 255
 
-        cv2.imwrite('../results/test/drive/{:d}/{:d}.png'.format(train_no, i), y)
+        cv2.imwrite('../results/test/drive/{:d}/{:d}.png'.format(train_no, i), tempx.astype(np.uint8))
+        np.save('../results/test/drive/{:d}/{:d}.npy'.format(train_no, i), y)
 
         i += 1
+
 
     y_test = list(np.ravel(y_test))
 
@@ -126,6 +130,7 @@ for train_no in range(1, 6):
 
     tf.keras.backend.clear_session()
     
+
     
 print('sp:'    , np.mean(sp_all), np.std(sp_all))
 print('se:'    , np.mean(se_all), np.std(se_all))
