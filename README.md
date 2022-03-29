@@ -1,9 +1,10 @@
 # DR-VNet
-Retinal Vessel Segmentation
+DR-VNet: Retinal Vessel Segmentation via Dense Residual UNet
 
 The weights can be downloaded here. (soon coming)
 
-Any papers using this code should cite the paper accordingly. 
+Any papers using the code and results should cite the paper accordingly.
+ 
 ```
 @INPROCEEDINGS{DRVnet,
   author={Karaali, Ali and Dahyot, Rozenn and Sexton, Donal J.},
